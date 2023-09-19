@@ -150,4 +150,5 @@
     var 변수 이름 = new Function(인수1, 인수2, ... , 인수n, 함수 몸통);
       var square = new Function("x", "return x*x");
  배열
+ ㅗㅓ호ㅗ료파ㅣ
  
