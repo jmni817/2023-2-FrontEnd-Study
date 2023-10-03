@@ -62,7 +62,7 @@ button {
     border: 0;
     border-radius: 15px;
     outline: 12px;
-    background-color: rgb(255, 139, 137);
+    background-color: rgba(255, 139, 137, 0.5);
 }
 
 /* todo-section, done-section */
