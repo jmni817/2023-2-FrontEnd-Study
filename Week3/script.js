@@ -22,13 +22,13 @@ const renderTodoItem = () =>
             // HTML에 새로운 요소를 추가하는 코드
             const itemText = document.createElement("span");
             itemText.className = "item-text";
-            itemText.addEventListener("click", toggleItem);
+            itemText.addEventListener("click", toggleItem); //클릭하면 toggleItem함수 호출
             itemText.innerText = savedItem.text; // 각각의 프로퍼티/메소드가 어떤 역할인지 알아보기.
 
             const deleteButton = document.createElement("button");
             deleteButton.className = "delete-button";
             deleteButton.addEventListener("click", removeItem);
-            deleteButton.innerText = "🧹";
+            deleteButton.innerText = "❎";
 
             item.appendChild(itemText);
             item.appendChild(deleteButton);
@@ -78,7 +78,7 @@ const toggleItem = (e) => {
 const removeItem = (e) => {
     const filteredList = itemList.filter(
         (inputObject) => 
-            inputObject.text !== e.target.parentNode.innerText.slice(0, -2)
+            inputObject.text !== e.target.parentNode.innerText.slice(0, -1)
     );
     localStorage.setItem("itemList", JSON.stringify(filteredList)); // 로컬 스토리지 갱신
     renderTodoItem();
